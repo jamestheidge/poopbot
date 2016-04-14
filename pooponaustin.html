@@ -38,11 +38,13 @@
             request.open('POST', slackUrl , true);
             request.send('{"text": ":poop:'+ signature +'","username": "Poop","icon_emoji": ":poop:","channel": "@jameshuffman"}');
             request.onreadystatechange = function() {
-                if(request.readyState === XMLHttpRequest.DONE && request.status === 200)
+                if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
                     var date = new Date();
                     document.getElementById('sent').value = "Successfully threw poop at Austin at " + date.toLocaleTimeString()  + " " + date.toLocaleDateString()
-                else
+                }
+                else{
                     document.getElementById('sent').value = "The poop did not find Austin... Sad day... Try again?";
+                }
             }
         }
     </script>
