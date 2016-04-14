@@ -41,10 +41,10 @@
             request.onreadystatechange = function() {
                 if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
                     var date = new Date();
-                    document.getElementById('sent').value = "Successfully threw poop at Austin at " + date.toLocaleTimeString()  + " " + date.toLocaleDateString()
+                    document.getElementById('sent').innerHTML  = "Successfully threw poop at Austin at " + date.toLocaleTimeString()  + " " + date.toLocaleDateString()
                 }
                 else{
-                    document.getElementById('sent').value = "The poop did not find Austin... Sad day... Try again?";
+                    document.getElementById('sent').innerHTML  = "The poop did not find Austin... Sad day... Try again?";
                 }
             }
         }
