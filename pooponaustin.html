@@ -37,7 +37,7 @@
             var request = new XMLHttpRequest();
             var slackUrl = 'https://hooks.slack.com/services/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';
             request.open('POST', slackUrl , true);
-            request.send('{"text": ":poop:'+ signature +'","username": "Poop","icon_emoji": ":poop:","channel": "@jameshuffman"}');
+            request.send('{"text": ":poop:'+ signature +'","username": "Poop","icon_emoji": ":poop:","channel": "@austin"}');
             request.onreadystatechange = function() {
                 if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
                     var date = new Date();
@@ -50,4 +50,4 @@
         }
     </script>
 </body>
-</html>    
+</html>
